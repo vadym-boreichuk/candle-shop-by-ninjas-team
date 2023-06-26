@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
 
-function App() {
+const getUsers = async () => {
+  const response = await axios.get(
+    "https://jsonplaceholder.typicode.com/users"
+  );
+
+  const res = response;
+  const obj = res.data;
+  return obj;
+};
+
+export const App = () => {
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchUsers = () => {
+      setLoading(true);
+
+      getUsers()
+        .then((obj) => {
+          setUsers(obj);
+        })
+        .catch((error) => {
+          setError("Ooops. Something went wrong...");
+          console.log(error);
+        })
+        .finally(() => setLoading(false));
+    };
+    fetchUsers();
+  }, []);
+
+  // Рендерим розмітку в залежності від значень у стані
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Users</h1>
+      {loading && "...loading"}
+      {error && <div>{error}</div>}
+      {users && (
+        <ul>
+          {users.map(({ id, name }) => (
+            <li key={id}>{name}</li>
+          ))}
+        </ul>
+      )}
     </div>
   );
-}
-
-export default App;
+};
