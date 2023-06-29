@@ -20,7 +20,7 @@ export const App = () => {
   };
 
   const addGoods = () => {
-    addProduct(name).then((res) => console.log(res));
+    addProduct(name);
   };
 
   return (
