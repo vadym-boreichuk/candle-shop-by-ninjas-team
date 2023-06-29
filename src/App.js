@@ -1,52 +1,33 @@
-import { useEffect } from "react";
-import axios from "axios";
 import { useState } from "react";
+import styles from "./App.module.css";
 
-const getUsers = async () => {
-  const response = await axios.get(
-    "https://jsonplaceholder.typicode.com/users"
-  );
-
-  const res = response;
-  const obj = res.data;
-  return obj;
-};
+import { homePage, getProduct, addProduct } from "./services/api";
 
 export const App = () => {
-  const [users, setUsers] = useState([]);
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState({});
 
-  useEffect(() => {
-    const fetchUsers = () => {
-      setLoading(true);
+  const getName = (qwery) => {
+    const goods = { qwery };
+    setName(goods);
+  };
 
-      getUsers()
-        .then((obj) => {
-          setUsers(obj);
-        })
-        .catch((error) => {
-          setError("Ooops. Something went wrong...");
-          console.log(error);
-        })
-        .finally(() => setLoading(false));
-    };
-    fetchUsers();
-  }, []);
+  const hello = () => {
+    console.log(homePage());
+  };
 
-  // Рендерим розмітку в залежності від значень у стані
+  const get = () => {
+    console.log(getProduct(1));
+  };
+
   return (
-    <div>
-      <h1>Users</h1>
-      {loading && "...loading"}
-      {error && <div>{error}</div>}
-      {users && (
-        <ul>
-          {users.map(({ id, name }) => (
-            <li key={id}>{name}</li>
-          ))}
-        </ul>
-      )}
+    <div className={styles.container}>
+      <button onClick={() => hello()}>Hello</button>
+      <button onClick={() => get()}>Get Product</button>
+      <input
+        placeholder="Add new product"
+        onChange={(e) => getName(e.target.value)}
+      ></input>
+      <button onClick={() => addProduct(name)}>Add product</button>
     </div>
   );
 };
