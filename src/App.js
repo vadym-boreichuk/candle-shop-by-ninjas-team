@@ -12,22 +12,26 @@ export const App = () => {
   };
 
   const hello = () => {
-    console.log(homePage());
+    homePage().then((res) => console.log(res.data));
   };
 
-  const get = () => {
-    console.log(getProduct(1));
+  const getGoods = () => {
+    getProduct(1).then((res) => console.log(res.data));
+  };
+
+  const addGoods = () => {
+    addProduct(name).then((res) => console.log(res));
   };
 
   return (
     <div className={styles.container}>
       <button onClick={() => hello()}>Hello</button>
-      <button onClick={() => get()}>Get Product</button>
+      <button onClick={() => getGoods()}>Get Product</button>
       <input
         placeholder="Add new product"
         onChange={(e) => getName(e.target.value)}
       ></input>
-      <button onClick={() => addProduct(name)}>Add product</button>
+      <button onClick={() => addGoods()}>Add product</button>
     </div>
   );
 };
