@@ -19,6 +19,10 @@ export const App = () => {
     getProduct(1).then((res) => console.log(res.data));
   };
 
+  const addGoods = () => {
+    addProduct(name).then((res) => console.log(res));
+  };
+
   return (
     <div className={styles.container}>
       <button onClick={() => hello()}>Hello</button>
@@ -27,7 +31,7 @@ export const App = () => {
         placeholder="Add new product"
         onChange={(e) => getName(e.target.value)}
       ></input>
-      <button onClick={() => addProduct(name)}>Add product</button>
+      <button onClick={() => addGoods()}>Add product</button>
     </div>
   );
 };
