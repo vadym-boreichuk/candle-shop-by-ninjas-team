@@ -17,7 +17,7 @@ export const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: #050505;
   &.active {
-    text-decoration: underline;
+    border-bottom: solid 2px black;
   }
 `;
 
@@ -35,6 +35,8 @@ export const LangBox = styled.div`
   margin-left: 104px;
   width: 77px;
   height: 24px;
+  cursor: pointer;
+  user-select: none;
 `;
 
 export const Text = styled.p`
@@ -50,4 +52,12 @@ export const IconBox = styled.div`
   align-items: center;
   margin-left: 65px;
   gap: 18px;
+`;
+
+export const Input = styled.input`
+  width: 45px;
+  border: none;
+  border-bottom: 2px solid #000;
+  background-color: inherit;
+  outline: none;
 `;

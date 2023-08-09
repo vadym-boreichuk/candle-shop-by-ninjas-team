@@ -1,7 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
 import {
   Container,
   IconBox,
+  Input,
   LangBox,
   Navigation,
   StyledLink,
@@ -14,6 +16,27 @@ import { ReactComponent as Search } from "../../images/search.svg";
 import { ReactComponent as User } from "../../images/user.svg";
 
 export const Header = () => {
+  const cutInput = useRef(null);
+  const [isLang, setIsLang] = useState(false);
+  const [isSearch, setIsSearch] = useState(false);
+
+  const closeOpenInput = (e) => {
+    if (cutInput.current && isSearch && !cutInput.current.contains(e.target)) {
+      setIsSearch(false);
+    }
+  };
+
+  document.addEventListener("mousedown", closeOpenInput);
+
+  useEffect(() => {});
+
+  const onSearch = () => {
+    setIsSearch(!isSearch);
+  };
+
+  const handleToggleMenu = () => {
+    setIsLang(!isLang);
+  };
   return (
     <Container>
       <NavLink to="/main">
@@ -26,12 +49,18 @@ export const Header = () => {
         <StyledLink to="/packing">Упакування</StyledLink>
         <StyledLink to="/contacts">Контакти</StyledLink>
       </Navigation>
-      <LangBox>
-        <Text>УКР</Text>
+      <LangBox onClick={handleToggleMenu}>
+        {isLang ? <Text>УКР</Text> : <Text>ENG</Text>}
       </LangBox>
-      <IconBox>
-        <Search />
-        <Favorite />
+      <IconBox ref={cutInput}>
+        {!isSearch ? (
+          <Search onClick={onSearch} />
+        ) : (
+          <Input type="text" name="username" />
+        )}
+        <Link to="/catalog">
+          <Favorite />
+        </Link>
         <Package />
         <User />
       </IconBox>
