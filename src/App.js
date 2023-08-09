@@ -1,37 +1,22 @@
-import { useState } from "react";
-import styles from "./App.module.css";
+import { Route, Routes } from "react-router-dom";
 
-import { homePage, getProduct, addProduct } from "./services/api";
+import { Layout } from "./componets/Layout/Layout.jsx";
+import { MainPage } from "./pages/Main/MainPage.js";
+import { CatalogPage } from "./pages/Catalog/CatalogPage.js";
+import { AboutBrandPage } from "./pages/AboutBrand/AboutBrandPage.js";
+import { PackingPage } from "./pages/Packing/PackingPage.js";
+import { ContactsPage } from "./pages/Contacts/ContactsPage.js";
 
 export const App = () => {
-  const [name, setName] = useState({});
-
-  const getName = (qwery) => {
-    const goods = { qwery };
-    setName(goods);
-  };
-
-  const hello = () => {
-    homePage().then((res) => console.log(res.data));
-  };
-
-  const getGoods = () => {
-    getProduct(1).then((res) => console.log(res.data));
-  };
-
-  const addGoods = () => {
-    addProduct(name);
-  };
-
   return (
-    <div className={styles.container}>
-      <button onClick={() => hello()}>Hello</button>
-      <button onClick={() => getGoods()}>Get Product</button>
-      <input
-        placeholder="Add new product"
-        onChange={(e) => getName(e.target.value)}
-      ></input>
-      <button onClick={() => addGoods()}>Add product</button>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/about" element={<AboutBrandPage />} />
+        <Route path="/packing" element={<PackingPage />} />
+        <Route path="/contacts" element={<ContactsPage />} />
+      </Route>
+    </Routes>
   );
 };
