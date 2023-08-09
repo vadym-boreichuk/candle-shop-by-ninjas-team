@@ -11,6 +11,7 @@ export const Container = styled.div`
 `;
 
 export const StyledLink = styled(NavLink)`
+  font-family: "Montserat";
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -40,6 +41,7 @@ export const LangBox = styled.div`
 `;
 
 export const Text = styled.p`
+  font-family: "Montserat";
   text-decoration: underline;
   font-weight: 600;
   font-size: 20px;
