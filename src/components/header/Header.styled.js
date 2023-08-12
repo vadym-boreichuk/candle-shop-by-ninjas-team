@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  max-width: 100%;
   height: 106px;
   align-items: center;
   background-color: #fff7f3;
@@ -23,6 +24,7 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const Navigation = styled.nav`
+  /* max-width: 100%; */
   display: flex;
   gap: 40px;
   margin-left: 130px;
@@ -34,7 +36,7 @@ export const LangBox = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 104px;
-  width: 77px;
+  /* width: 77px; */
   height: 24px;
   cursor: pointer;
   user-select: none;

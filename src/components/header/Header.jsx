@@ -9,11 +9,11 @@ import {
   StyledLink,
   Text,
 } from "./Header.styled";
-import { ReactComponent as Logo } from "../../images/logo.svg";
-import { ReactComponent as Favorite } from "../../images/favorite.svg";
-import { ReactComponent as Package } from "../../images/package.svg";
-import { ReactComponent as Search } from "../../images/search.svg";
-import { ReactComponent as User } from "../../images/user.svg";
+import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+import { ReactComponent as Favorite } from "../../assets/images/favorite.svg";
+import { ReactComponent as Package } from "../../assets/images/package.svg";
+import { ReactComponent as Search } from "../../assets/images/search.svg";
+import { ReactComponent as User } from "../../assets/images/user.svg";
 
 export const Header = () => {
   const cutInput = useRef(null);
@@ -50,7 +50,7 @@ export const Header = () => {
         <StyledLink to="/contacts">Контакти</StyledLink>
       </Navigation>
       <LangBox onClick={handleToggleMenu}>
-        {isLang ? <Text>УКР</Text> : <Text>ENG</Text>}
+        <Text> {isLang ? "УКР" : "ENG"}</Text>
       </LangBox>
       <IconBox ref={cutInput}>
         {!isSearch ? (
@@ -58,11 +58,16 @@ export const Header = () => {
         ) : (
           <Input type="text" name="username" />
         )}
-        <Link to="/catalog">
+        <Link to="/favorite">
           <Favorite />
         </Link>
-        <Package />
-        <User />
+        <Link to="/cart">
+          <Package />
+        </Link>
+
+        <Link to="/user">
+          <User />
+        </Link>
       </IconBox>
     </Container>
   );
