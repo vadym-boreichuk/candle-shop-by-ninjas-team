@@ -1,9 +1,9 @@
-import { About } from "../../componets/main/about/About";
-import { Contact } from "../../componets/main/contact/Contact";
-import { Gallery } from "../../componets/main/gallery/Galery";
-import { Gifts } from "../../componets/main/gifts/Gifts";
-import { Hero } from "../../componets/main/hero/Hero";
-import { Popular } from "../../componets/main/popular/Popular";
+import { About } from "../../components/main/about/About";
+import { Contact } from "../../components/main/contact/Contact";
+import { Gallery } from "../../components/main/gallery/Galery";
+import { Gifts } from "../../components/main/gifts/Gifts";
+import { Hero } from "../../components/main/hero/Hero";
+import { Popular } from "../../components/main/popular/Popular";
 
 export const MainPage = () => {
   return (
