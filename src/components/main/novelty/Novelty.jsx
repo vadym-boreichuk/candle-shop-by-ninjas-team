@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Card } from "../../cardComponent/Card";
 import cards from "../../../assets/cards.json";
-import { Box, Container } from "./Novelty.styled.js";
+import { Box, Container, Title, StyledLink } from "./Novelty.styled.js";
 
 export const Novelty = () => {
   const settings = {
@@ -20,8 +20,8 @@ export const Novelty = () => {
     <Container>
       <Box>
         {" "}
-        <h2>Сезонні новинки</h2>
-        <p>переглянути усі</p>
+        <Title>Сезонні новинки</Title>
+        <StyledLink to="/main">переглянути усі</StyledLink>
       </Box>
 
       <Slider {...settings}>

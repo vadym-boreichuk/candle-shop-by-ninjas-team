@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    "Corsiva", "Josefin" sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +10,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* --------- Fonts ------------------------------------- */
+@font-face {
+  font-family: "Corsiva";
+  src: url("./fonts/Corsiva.ttf") format("truetype");
+  /* font-weight: 400px;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: "Josefin-regular";
+  src: url("./fonts/josefin/JosefinSans-Medium.ttf") format("truetype");
+  /* font-weight: 400;
+  font-style: normal; */
+}
+
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: url("./fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
+  /* font-weight: 600;
+  font-style: normal; */
 }
