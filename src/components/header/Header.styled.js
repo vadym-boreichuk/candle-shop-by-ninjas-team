@@ -3,12 +3,13 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  max-width: 100%;
+  width: 100%;
   height: 106px;
   align-items: center;
   background-color: #fff7f3;
   padding: 0 75px;
-  gap: 10px;
+  justify-content: space-between;
+  /* gap: 10px; */
 `;
 
 export const StyledLink = styled(NavLink)`
@@ -27,7 +28,7 @@ export const Navigation = styled.nav`
   /* max-width: 100%; */
   display: flex;
   gap: 40px;
-  margin-left: 130px;
+  /* margin-left: 130px; */
 `;
 
 export const LangBox = styled.div`
@@ -35,7 +36,7 @@ export const LangBox = styled.div`
   /* padding: 0 17px; */
   justify-content: center;
   align-items: center;
-  margin-left: 104px;
+  /* margin-left: 104px; */
   /* width: 77px; */
   height: 24px;
   cursor: pointer;
@@ -54,7 +55,7 @@ export const Text = styled.p`
 export const IconBox = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 65px;
+  /* margin-left: 65px; */
   gap: 18px;
 `;
 
