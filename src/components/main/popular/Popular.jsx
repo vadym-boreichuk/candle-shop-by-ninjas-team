@@ -1,3 +1,3 @@
 export const Popular = () => {
-  return <div></div>;
+  return <div>Popular</div>;
 };

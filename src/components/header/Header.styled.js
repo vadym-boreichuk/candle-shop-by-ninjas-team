@@ -1,12 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
+export const ContainerBox = styled.div`
+  background-color: #fff7f3;
+`;
+
 export const Container = styled.div`
   display: flex;
-  width: 100%;
+  max-width: 1440px;
   height: 106px;
   align-items: center;
-  background-color: #fff7f3;
+  margin: auto;
+  /* background-color: #fff7f3; */
   padding: 0 75px;
   justify-content: space-between;
   /* gap: 10px; */
