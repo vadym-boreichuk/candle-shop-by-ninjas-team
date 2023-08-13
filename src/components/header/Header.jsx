@@ -8,6 +8,7 @@ import {
   Navigation,
   StyledLink,
   Text,
+  ContainerBox,
 } from "./Header.styled";
 import { ReactComponent as Logo } from "../../assets/images/logo.svg";
 import { ReactComponent as Favorite } from "../../assets/images/favorite.svg";
@@ -38,37 +39,39 @@ export const Header = () => {
     setIsLang(!isLang);
   };
   return (
-    <Container>
-      <NavLink to="/main">
-        <Logo />
-      </NavLink>
-      <Navigation>
-        <StyledLink to="/main">Головна</StyledLink>
-        <StyledLink to="/catalog">Каталог</StyledLink>
-        <StyledLink to="/about">Про бренд</StyledLink>
-        <StyledLink to="/packing">Упакування</StyledLink>
-        <StyledLink to="/contacts">Контакти</StyledLink>
-      </Navigation>
-      <LangBox onClick={handleToggleMenu}>
-        <Text> {isLang ? "УКР" : "ENG"}</Text>
-      </LangBox>
-      <IconBox ref={cutInput}>
-        {!isSearch ? (
-          <Search onClick={onSearch} />
-        ) : (
-          <Input type="text" name="username" />
-        )}
-        <Link to="/favorite">
-          <Favorite />
-        </Link>
-        <Link to="/cart">
-          <Package />
-        </Link>
+    <ContainerBox>
+      <Container>
+        <NavLink to="/main">
+          <Logo />
+        </NavLink>
+        <Navigation>
+          <StyledLink to="/main">Головна</StyledLink>
+          <StyledLink to="/catalog">Каталог</StyledLink>
+          <StyledLink to="/about">Про бренд</StyledLink>
+          <StyledLink to="/packing">Упакування</StyledLink>
+          <StyledLink to="/contacts">Контакти</StyledLink>
+        </Navigation>
+        <LangBox onClick={handleToggleMenu}>
+          <Text> {isLang ? "УКР" : "ENG"}</Text>
+        </LangBox>
+        <IconBox ref={cutInput}>
+          {!isSearch ? (
+            <Search onClick={onSearch} />
+          ) : (
+            <Input type="text" name="username" />
+          )}
+          <Link to="/favorite">
+            <Favorite />
+          </Link>
+          <Link to="/cart">
+            <Package />
+          </Link>
 
-        <Link to="/user">
-          <User />
-        </Link>
-      </IconBox>
-    </Container>
+          <Link to="/user">
+            <User />
+          </Link>
+        </IconBox>
+      </Container>
+    </ContainerBox>
   );
 };
