@@ -7,16 +7,14 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <ColorBox>
-        <Container>
+      <Container>
+        <ColorBox>
           <main>
             <Outlet />
           </main>
-        </Container>
-      </ColorBox>
-      <footer>
+        </ColorBox>
         <Footer />
-      </footer>
+      </Container>
     </>
   );
 };

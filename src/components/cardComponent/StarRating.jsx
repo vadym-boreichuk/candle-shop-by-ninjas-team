@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 
 export const MyRating = () => {
-  const [rating, setRating] = useState(0);
+  const [, setRating] = useState(0);
   const settings = {
     allowFraction: true,
     size: 20,
