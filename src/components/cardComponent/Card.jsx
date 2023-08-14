@@ -1,10 +1,8 @@
 import {
-  ButtonComponent,
   Content,
   OldPrice,
   Price,
   PriceThumb,
-  Rating,
   Thumb,
   Title,
   ShadowBox,
@@ -12,6 +10,7 @@ import {
 import { MyRating } from "./StarRating";
 import { ReactComponent as Favorite } from "../../assets/images/favorite.svg";
 import { ReactComponent as Package } from "../../assets/images/package.svg";
+import { StyledButton } from "../Button/Button.styled";
 
 export const Card = ({ name, image, content }) => {
   return (
@@ -33,7 +32,7 @@ export const Card = ({ name, image, content }) => {
         <MyRating />
       </ShadowBox>
       <PriceThumb>
-        <ButtonComponent>buy</ButtonComponent>
+        <StyledButton sm>buy</StyledButton>
         <Price>
           90<span>&#8372;</span>
         </Price>
