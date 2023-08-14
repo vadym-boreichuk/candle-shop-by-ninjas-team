@@ -14,7 +14,6 @@ export const Novelty = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     arrows: false,
-    // focusOnSelect: true,
   };
   return (
     <Container>

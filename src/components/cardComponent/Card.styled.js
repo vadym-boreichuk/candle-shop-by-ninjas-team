@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Thumb = styled.div`
   position: relative;
-  width: 307px;
+  max-width: 307px;
   height: 460px;
   padding: 20px 18px;
   margin: 0;
@@ -29,18 +29,11 @@ export const Content = styled.div`
   overflow: hidden;
 `;
 
-export const Rating = styled.div``;
-
 export const PriceThumb = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
-`;
-
-export const ButtonComponent = styled.button`
-  width: 135px;
-  height: 35px;
 `;
 
 export const Price = styled.div`
