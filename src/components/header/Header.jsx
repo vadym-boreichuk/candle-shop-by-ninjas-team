@@ -10,11 +10,11 @@ import {
   Text,
   ContainerBox,
 } from "./Header.styled";
-import { ReactComponent as Logo } from "../../assets/images/logo.svg";
-import { ReactComponent as Favorite } from "../../assets/images/favorite.svg";
-import { ReactComponent as Package } from "../../assets/images/package.svg";
-import { ReactComponent as Search } from "../../assets/images/search.svg";
-import { ReactComponent as User } from "../../assets/images/user.svg";
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
+import { ReactComponent as Favorite } from "../../assets/icons/favorite.svg";
+import { ReactComponent as Package } from "../../assets/icons/package.svg";
+import { ReactComponent as Search } from "../../assets/icons/search.svg";
+import { ReactComponent as User } from "../../assets/icons/user.svg";
 
 export const Header = () => {
   const cutInput = useRef(null);
@@ -45,11 +45,21 @@ export const Header = () => {
           <Logo />
         </NavLink>
         <Navigation>
-          <StyledLink to="/main">Головна</StyledLink>
-          <StyledLink to="/catalog">Каталог</StyledLink>
-          <StyledLink to="/about">Про бренд</StyledLink>
-          <StyledLink to="/packing">Упакування</StyledLink>
-          <StyledLink to="/contacts">Контакти</StyledLink>
+          <StyledLink style={{ fontWeight: "500" }} to="/main">
+            Головна
+          </StyledLink>
+          <StyledLink style={{ fontWeight: "500" }} to="/catalog">
+            Каталог
+          </StyledLink>
+          <StyledLink style={{ fontWeight: "500" }} to="/about">
+            Про бренд
+          </StyledLink>
+          <StyledLink style={{ fontWeight: "500" }} to="/packing">
+            Упакування
+          </StyledLink>
+          <StyledLink style={{ fontWeight: "500" }} to="/contacts">
+            Контакти
+          </StyledLink>
         </Navigation>
         <LangBox onClick={handleToggleMenu}>
           <Text> {isLang ? "УКР" : "ENG"}</Text>

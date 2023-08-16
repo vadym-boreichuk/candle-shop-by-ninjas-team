@@ -18,8 +18,7 @@ export const Popular = () => {
   return (
     <Container>
       <Box>
-        {" "}
-        <Title>Найпопулярніші товари</Title>
+        <Title style={{ fontWeight: "400" }}>Найпопулярніші товари</Title>
         <StyledLink to="/main">переглянути усі</StyledLink>
       </Box>
 

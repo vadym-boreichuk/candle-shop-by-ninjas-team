@@ -17,7 +17,6 @@ export const Container = styled.div`
 
 export const StyledLink = styled(NavLink)`
   font-family: "Montserat";
-  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   text-decoration: none;

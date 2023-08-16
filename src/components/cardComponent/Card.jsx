@@ -8,8 +8,8 @@ import {
   ShadowBox,
 } from "./Card.styled";
 import { MyRating } from "./StarRating";
-import { ReactComponent as Favorite } from "../../assets/images/favorite.svg";
-import { ReactComponent as Package } from "../../assets/images/package.svg";
+import { ReactComponent as Favorite } from "../../assets/icons/favorite.svg";
+import { ReactComponent as Package } from "../../assets/icons/package.svg";
 import { StyledButton } from "../Button/Button.styled";
 
 export const Card = ({ name, image, content }) => {
@@ -26,8 +26,8 @@ export const Card = ({ name, image, content }) => {
       />
 
       <img src={image} alt={name} width="271" height="221" />
-      <Title>{name}</Title>
-      <Content>{content}</Content>
+      <Title style={{ fontWeight: "600" }}>{name}</Title>
+      <Content style={{ fontWeight: "400" }}>{content}</Content>
       <ShadowBox>
         <MyRating />
       </ShadowBox>

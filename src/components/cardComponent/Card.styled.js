@@ -10,8 +10,8 @@ export const Thumb = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: "Quicksand-Bold", sans-serif;
-  font-weight: 600px;
+  font-family: "Quicksand";
+  /* font-weight: 600px; */
   font-style: normal;
   font-size: 24px;
   line-height: 30px;
@@ -19,10 +19,9 @@ export const Title = styled.div`
 `;
 
 export const Content = styled.div`
-  font-family: "Josefin-regular", sans-serif;
+  font-family: "Josefin";
   color: rgba(147, 147, 147, 1);
   height: 50px;
-  font-weight: 400px;
   font-size: 16px;
   line-height: 16px;
   margin-top: 10px;

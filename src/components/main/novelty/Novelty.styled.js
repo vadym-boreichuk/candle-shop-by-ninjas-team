@@ -12,8 +12,7 @@ export const Box = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-family: "Corsiva";
-  font-weight: 400px;
+  font-family: "Monotype-Corsiva";
   font-size: 64px;
   line-height: 70px;
 `;

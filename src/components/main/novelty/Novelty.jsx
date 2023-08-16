@@ -15,11 +15,11 @@ export const Novelty = () => {
     slidesToScroll: 4,
     arrows: false,
   };
+
   return (
     <Container>
       <Box>
-        {" "}
-        <Title>Сезонні новинки</Title>
+        <Title style={{ fontWeight: "400" }}>Сезонні новинки</Title>
         <StyledLink to="/main">переглянути усі</StyledLink>
       </Box>
 

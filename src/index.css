@@ -13,23 +13,24 @@ code {
 }
 
 /* --------- Fonts ------------------------------------- */
+
 @font-face {
-  font-family: "Corsiva";
-  src: url("./fonts/Corsiva.ttf") format("truetype");
-  /* font-weight: 400px;
-  font-style: normal; */
+  font-family: "Monotype-Corsiva";
+  src: url("./fonts/Monotypecorsiva.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Josefin-regular";
-  src: url("./fonts/josefin/JosefinSans-Medium.ttf") format("truetype");
-  /* font-weight: 400;
-  font-style: normal; */
+  font-family: "Josefin";
+  src: url("./fonts/Josefin.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Quicksand-Bold";
-  src: url("./fonts/quicksand/Quicksand-Bold.ttf") format("truetype");
-  /* font-weight: 600;
-  font-style: normal; */
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
