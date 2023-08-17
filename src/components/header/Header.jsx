@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
-  Container,
+  // Container,
   IconBox,
   Input,
   LangBox,
@@ -9,6 +9,7 @@ import {
   StyledLink,
   Text,
   ContainerBox,
+  Div,
 } from "./Header.styled";
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import { ReactComponent as Favorite } from "../../assets/icons/favorite.svg";
@@ -40,12 +41,13 @@ export const Header = () => {
   };
   return (
     <ContainerBox>
-      <Container>
-        <NavLink to="/main">
+      {/* //   <Container> */}
+      <Div>
+        <NavLink to="/">
           <Logo />
         </NavLink>
         <Navigation>
-          <StyledLink style={{ fontWeight: "500" }} to="/main">
+          <StyledLink style={{ fontWeight: "500" }} to="/">
             Головна
           </StyledLink>
           <StyledLink style={{ fontWeight: "500" }} to="/catalog">
@@ -81,7 +83,8 @@ export const Header = () => {
             <User />
           </Link>
         </IconBox>
-      </Container>
+      </Div>
+      {/* </Container> */}
     </ContainerBox>
   );
 };
