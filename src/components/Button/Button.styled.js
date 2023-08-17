@@ -33,4 +33,7 @@ export const StyledButton = styled.button`
   border-radius: 44px;
   color: white;
   cursor: pointer;
+  &:hover {
+    background-color: rgba(140, 12, 38, 1);
+  }
 `;

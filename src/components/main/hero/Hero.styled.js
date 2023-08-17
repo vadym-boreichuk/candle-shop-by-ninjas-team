@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 export const HeroSection = styled.section`
-  background-color: #f5ebe5;
+  /* background-color: #f5ebe5; */
   padding: 134px 75px 223px 69px;
 `;
 

@@ -5,8 +5,8 @@ import { StyledButton } from "../../Button/Button.styled";
 import { Container, Input, StyledForm, Text, Title } from "./Contact.styled";
 
 let SignupSchema = Yup.object().shape({
-  email: Yup.string().email("Invalid email").required("Required"),
-  message: Yup.string().required().min(2, "Too Short!").max(70, "Too Long!"),
+  email: Yup.string().email("Invalid email"),
+  message: Yup.string().min(5),
 });
 
 const initialValues = {

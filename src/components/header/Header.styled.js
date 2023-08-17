@@ -1,8 +1,31 @@
 import { NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 
+export const Div = styled.header`
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 1440px;
+  /* position: fixed;  */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 106px;
+  z-index: 999;
+  /* background-color: #fff7f3; */
+  padding: 0 75px;
+`;
+
 export const ContainerBox = styled.div`
+  display: flex;
+  justify-content: center;
   background-color: #fff7f3;
+  width: 100%;
+  height: 106px;
+  position: fixed;
+  /* margin-left: auto; */
+  z-index: 999;
 `;
 
 export const Container = styled.div`
@@ -10,9 +33,11 @@ export const Container = styled.div`
   max-width: 1440px;
   height: 106px;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 75px;
   justify-content: space-between;
+  /* position: fixed; */
+  background-color: #fff7f3;
 `;
 
 export const StyledLink = styled(NavLink)`
