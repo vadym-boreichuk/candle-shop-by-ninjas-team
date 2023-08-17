@@ -32,6 +32,7 @@ export const StyledForm = styled(Form)`
   flex-direction: column;
   align-items: center;
   width: 753px;
+  margin-top: 40px;
 `;
 
 export const Input = styled(Field)`
