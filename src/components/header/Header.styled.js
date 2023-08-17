@@ -20,7 +20,7 @@ export const Div = styled.header`
 export const ContainerBox = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #fff7f3;
+  background-color: rgba(255, 247, 243, 0.94);
   width: 100%;
   height: 106px;
   position: fixed;
