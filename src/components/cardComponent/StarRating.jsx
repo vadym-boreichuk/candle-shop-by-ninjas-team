@@ -17,16 +17,16 @@ export const MyRating = () => {
     // other logic
   };
   // Optinal callback functions
-  const onPointerEnter = () => console.log("Enter");
-  const onPointerLeave = () => console.log("Leave");
+  // const onPointerEnter = () => console.log("Enter");
+  // const onPointerLeave = () => console.log("Leave");
   const onPointerMove = (value, index) => console.log(value, index);
 
   return (
     <div className="App">
       <Rating
         onClick={handleRating}
-        onPointerEnter={onPointerEnter}
-        onPointerLeave={onPointerLeave}
+        // onPointerEnter={onPointerEnter}
+        // onPointerLeave={onPointerLeave}
         onPointerMove={onPointerMove}
         {...settings}
         /* Available Props */
