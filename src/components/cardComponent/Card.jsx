@@ -32,7 +32,7 @@ export const Card = ({ name, image, content }) => {
         <MyRating />
       </ShadowBox>
       <PriceThumb>
-        <StyledButton sm>buy</StyledButton>
+        <StyledButton sm="true">buy</StyledButton>
         <Price>
           90<span>&#8372;</span>
         </Price>
