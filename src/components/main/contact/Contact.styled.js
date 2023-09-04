@@ -10,6 +10,7 @@ export const Container = styled.div`
   margin-top: 110px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 100px;
 `;
 
 export const Title = styled.h2`
