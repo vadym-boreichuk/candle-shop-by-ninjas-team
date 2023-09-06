@@ -12,7 +12,7 @@ import { ReactComponent as Favorite } from "../../assets/icons/favorite.svg";
 import { ReactComponent as Package } from "../../assets/icons/package.svg";
 import { StyledButton } from "../Button/Button.styled";
 
-export const Card = ({ name, image, content }) => {
+export const Card = ({ name, image, description, price }) => {
   return (
     <Thumb>
       <Favorite
@@ -27,14 +27,15 @@ export const Card = ({ name, image, content }) => {
 
       <img src={image} alt={name} width="271" height="221" />
       <Title style={{ fontWeight: "600" }}>{name}</Title>
-      <Content style={{ fontWeight: "400" }}>{content}</Content>
+      <Content style={{ fontWeight: "400" }}>{description}</Content>
       <ShadowBox>
         <MyRating />
       </ShadowBox>
       <PriceThumb>
         <StyledButton sm="true">buy</StyledButton>
         <Price>
-          90<span>&#8372;</span>
+          ${price}
+          <span>&#8372;</span>
         </Price>
         <OldPrice>
           173<span>&#8372;</span>

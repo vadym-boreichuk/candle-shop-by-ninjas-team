@@ -19,7 +19,7 @@ export const MyRating = () => {
   // Optinal callback functions
   // const onPointerEnter = () => console.log("Enter");
   // const onPointerLeave = () => console.log("Leave");
-  const onPointerMove = (value, index) => console.log(value, index);
+  const onPointerMove = (value, index) => value;
 
   return (
     <div className="App">
