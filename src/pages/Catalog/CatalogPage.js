@@ -19,16 +19,16 @@ export const CatalogPage = () => {
       {products.map(
         ({
           id,
-          // name,
+          productName,
           description,
           price,
           seasonNovelties,
           popularProducts,
-          collection: { image, name },
+          collection: { image, collectionName },
         }) => (
           <Card
             key={id}
-            name={name}
+            name={productName}
             description={description}
             price={price}
             image={"https://picsum.photos/271/221"}

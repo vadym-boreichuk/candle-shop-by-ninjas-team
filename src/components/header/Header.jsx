@@ -50,7 +50,7 @@ export const Header = () => {
           <StyledLink style={{ fontWeight: "500" }} to="/">
             Головна
           </StyledLink>
-          <StyledLink style={{ fontWeight: "500" }} to="/catalog">
+          <StyledLink style={{ fontWeight: "500" }} to="/products">
             Каталог
           </StyledLink>
           <StyledLink style={{ fontWeight: "500" }} to="/about">
