@@ -1,15 +1,34 @@
 import React, { useState } from "react";
 import Slider from "rc-slider";
-import "rc-slider/assets/index.css"; // Import the default CSS for rc-slider
+import "rc-slider/assets/index.css";
 import { Container, Input, Label } from "./PriceSlider.styled";
 import "./PriceSlider.css";
 import { StyledButton } from "../Button/Button.styled";
 
 export const PriceRangeSlider = ({ min, max }) => {
-  const [range, setRange] = useState([50, 500]); // Initial lower and upper bounds
+  const [range, setRange] = useState([50, 500]);
 
   const handleRangeChange = (newRange) => {
     setRange(newRange);
+  };
+
+  const formatInputValue = (value) => {
+    if (value >= 2000) {
+      return "2000+";
+    } else if (value < 0) {
+      return "0";
+    }
+    return value.toString();
+  };
+
+  const handleInputChange = (e, index) => {
+    const newValue = parseInt(e.target.value);
+
+    if (!isNaN(newValue)) {
+      const newRange = [...range];
+      newRange[index] = newValue > 2000 ? 2000 : Math.max(0, newValue);
+      setRange(newRange);
+    }
   };
 
   return (
@@ -18,12 +37,14 @@ export const PriceRangeSlider = ({ min, max }) => {
       <br />
       <Input
         style={{ marginRight: "38px" }}
-        placeholder={`${range[0]}₴`}
-        onChange={(e) => setRange([e.target.value, range[1]])}
+        placeholder={`${formatInputValue(range[0])}₴`}
+        value={formatInputValue(range[0])}
+        onChange={(e) => handleInputChange(e, 0)}
       />
       <Input
-        placeholder={`${range[1]}₴`}
-        onChange={(e) => setRange([range[0], e.target.value])}
+        placeholder={`${formatInputValue(range[1])}₴`}
+        value={formatInputValue(range[1])}
+        onChange={(e) => handleInputChange(e, 1)}
       />
       <Slider
         style={{ marginBottom: "50px" }}
@@ -34,12 +55,9 @@ export const PriceRangeSlider = ({ min, max }) => {
         value={range}
         onChange={handleRangeChange}
       />
-      {/* <span>{range[0]}</span> - <span>{range[1]}</span> */}
       <StyledButton style={{ margin: "0 auto" }} lg>
         Застосувати
       </StyledButton>
     </Container>
   );
 };
-
-// export default PriceRangeSlider;
