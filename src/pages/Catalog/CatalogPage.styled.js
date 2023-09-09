@@ -1,6 +1,10 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
+  padding-top: 150px;
+`;
+
+export const GridContainer = styled.div`
   max-width: 77%;
 
   display: grid;
