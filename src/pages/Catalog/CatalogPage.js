@@ -3,6 +3,7 @@ import { Card } from "../../components/cardComponent/Card";
 import { getAllProducts } from "../../services/api";
 import { GridContainer, Container } from "./CatalogPage.styled";
 import { PriceRangeSlider } from "../../components/PriceSlider/PriceSlider";
+import { DropDown } from "../../components/DropDown/DropDown";
 
 export const CatalogPage = () => {
   // const products = getAllProducts();,
@@ -11,7 +12,7 @@ export const CatalogPage = () => {
   useEffect(() => {
     getAllProducts().then((res) => {
       setProducts(res.data.content);
-      console.log(res.data.content);
+      // console.log(res.data.content);
     });
   }, []);
   const minPrice = 100; // Dynamic min value
@@ -19,6 +20,7 @@ export const CatalogPage = () => {
 
   return (
     <Container>
+      <DropDown />
       <PriceRangeSlider />
       <GridContainer>
         {products.map(

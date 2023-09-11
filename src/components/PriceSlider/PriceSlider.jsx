@@ -55,7 +55,7 @@ export const PriceRangeSlider = ({ min, max }) => {
         value={range}
         onChange={handleRangeChange}
       />
-      <StyledButton style={{ margin: "0 auto" }} lg>
+      <StyledButton style={{ margin: "0 auto" }} lg="true">
         Застосувати
       </StyledButton>
     </Container>
