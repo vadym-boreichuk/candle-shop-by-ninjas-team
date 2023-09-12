@@ -1,21 +1,33 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 150px;
+  width: 100%;
+  padding: 150px 75px 10px 75px;
+  display: flex;
+  flex-direction: column;
+`;
+export const ProductContainer = styled.div`
+  /* width: 100%;
+  padding: 150px 75px 10px 75px; */
+  display: flex;
+  position: relative;
+`;
+
+export const FilterContainer = styled.div`
+  position: relative;
+  margin-top: 450px;
 `;
 
 export const GridContainer = styled.div`
-  max-width: 77%;
-
+  /* position: absolute; */
+  margin-left: auto;
   display: grid;
-  align-content: flex-start;
-  justify-content: flex-end;
-  grid-column-start: 2;
-  grid-template-columns: 1fr 2fr;
-  grid-row-gap: 30px; /* Проміжок між рядками */
-  grid-column-gap: 15px;
-  padding-top: 150px;
-
-  justify-content: flex-end; /* Вирівнювання по лівому краю (горизонталь) */
-  align-items: flex-end;
+  grid-gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  /* justify-content: center;
+  align-content: center; */
+  :nth-child(1) {
+    grid-column-start: 2;
+  }
+  right: 75px;
 `;
