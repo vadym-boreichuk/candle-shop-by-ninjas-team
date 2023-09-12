@@ -19,7 +19,7 @@ export const DropDown = () => {
         <option value="Вiд дорогих">Вiд дорогих</option>
         <option value="Новинки">Новинки</option>
       </Select>
-      <p>Ви обрали: {selectedValue}</p>
+      {/* <p>Ви обрали: {selectedValue}</p> */}
     </div>
   );
 };

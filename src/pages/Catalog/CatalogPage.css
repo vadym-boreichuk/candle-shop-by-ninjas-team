@@ -1,0 +1,21 @@
+/* .grid-item {
+  width: 20px;
+}
+
+.myComponent {
+  width: 50px;
+  color: black;
+} */
+
+.grid-container {
+  /* display: grid;  */
+  /* grid-template-rows: repeat(5, 3fr);
+  grid-template-columns: repeat(3, 1fr); 2 колонки у першому рядку */
+  /* grid-gap: 10px; Проміжок між елементами */
+  /* background-color: black; */
+}
+
+/* Усі наступні рядки будуть мати 3 колонки */
+/* .grid-container > *:nth-child(1) {
+  grid-column-start: 2;
+} */
